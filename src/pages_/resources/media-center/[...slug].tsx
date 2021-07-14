@@ -79,7 +79,7 @@ const MediaCenterDetail = ({ postData }) => {
                 <Breadcrumbs breadcrumbData={breadcrumbData} />
             </Container>
             <BlogDetailHead title={postData.title}
-                date={postData.created_at}
+                date={postData.start_date}
                 tagData={postData.tags}
                 parentPage={'media-center'} />
             <BlogDetailArticle contents={postData.content} scrollHandler={handleScroll} />
