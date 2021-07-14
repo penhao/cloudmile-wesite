@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import makeStyles from "@material-ui/core/styles/makeStyles";
-import {Theme} from "@material-ui/core";
+import { Theme } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import Divider from "@material-ui/core/Divider";
@@ -179,7 +179,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     }
 }));
 const ContactAlert = () => {
-    const {t} = useTranslation();
+    const { t } = useTranslation();
     const classes = useStyles();
     const [isOpen, setIsOpen] = useState(false);
     const [tel, setTel] = useState('');
@@ -199,32 +199,32 @@ const ContactAlert = () => {
         <div className={clsx(classes.alert, (isOpen) ? classes.active : null)} onClick={handleOpen}>
             <Box display={'flex'} flexDirection={'column'} className={classes.inner}>
                 <Box display={'flex'} alignItems={'center'} className={classes.titleWrapper}>
-                    <img src="/images/icons/questions.png" className={classes.icon}/>
+                    <img src="/images/icons/questions.png" className={classes.icon} />
                     <Typography variant={"body1"} component={'div'} align={"center"} className={classes.title}>
                         {t('common:Questions？')}
                     </Typography>
                 </Box>
                 <Box display={'flex'} flexDirection={'column'} className={classes.contentWrapper}>
-                    <Divider className={classes.divider}/>
+                    <Divider className={classes.divider} />
                     <Typography variant={"body1"} className={classes.desc} dangerouslySetInnerHTML={{
                         __html: t('common:No problem We can help you__')
-                    }}/>
+                    }} />
                     <Grid container spacing={smUp ? 2 : 1} className={classes.buttonList}>
                         <Grid item xs={6} sm={6}>
                             <NavLink hrefPath={`tel:${tel}`} fullWidth isLaunch={true} classNames={classes.button}>
-                                Let's Chat
+                                {t("common:Widget Let's Chat")}
                             </NavLink>
                         </Grid>
                         <Grid item xs={6} sm={6}>
                             <NavLink hrefPath={'/contact'} fullWidth isLaunch={false} classNames={classes.button}>
-                                Contact Us
+                                {t("common:Contact Us")}
                             </NavLink>
                         </Grid>
                     </Grid>
                 </Box>
             </Box>
             <Button onClick={handleClose} className={classes.close}>
-                <AddIcon/>
+                <AddIcon />
             </Button>
         </div>
     );
