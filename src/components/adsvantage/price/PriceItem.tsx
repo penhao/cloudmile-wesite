@@ -1,8 +1,8 @@
-import React, {useEffect, useRef} from 'react';
-import {v4 as uuidv4} from 'uuid';
-import {makeStyles} from "@material-ui/styles";
-import {Theme, Typography, Box, Divider, Button} from "@material-ui/core";
-import {UserPriceProps} from "../useUserPrice";
+import React, { useEffect, useRef } from 'react';
+import { v4 as uuidv4 } from 'uuid';
+import { makeStyles } from "@material-ui/styles";
+import { Theme, Typography, Box, Divider, Button } from "@material-ui/core";
+import { UserPriceProps } from "../useUserPrice";
 import clsx from "clsx";
 import useTranslation from "next-translate/useTranslation";
 
@@ -32,8 +32,8 @@ const useStyles = makeStyles((theme: Theme) => ({
         padding: '0 10px 30px 10px',
         boxShadow: '0 2px 14px 0 rgba(137, 174, 255, 0.2)',
         backgroundColor: '#ededed',
-        borderTopLeftRadius: ({topic}: IStyleProps) => topic ? 0 : '10px',
-        borderTopRightRadius: ({topic}: IStyleProps) => topic ? 0 : '10px',
+        borderTopLeftRadius: ({ topic }: IStyleProps) => topic ? 0 : '10px',
+        borderTopRightRadius: ({ topic }: IStyleProps) => topic ? 0 : '10px',
         borderBottomLeftRadius: '10px',
         borderBottomRightRadius: '10px'
     },
@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme: Theme) => ({
         padding: '6px',
         fontWeight: 500,
         letterSpacing: '0.6px',
-        backgroundColor: ({type}: IStyleProps) => {
+        backgroundColor: ({ type }: IStyleProps) => {
             return (type === 'User')
                 ? theme.palette.primary.main
                 : (type === 'Agency') ? theme.palette.secondary.main : theme.palette.primary.main
@@ -67,7 +67,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     projectName: {
         fontWeight: 600,
         letterSpacing: '0.9px',
-        color: ({type}: IStyleProps) => {
+        color: ({ type }: IStyleProps) => {
             return (type === 'User')
                 ? theme.palette.primary.main
                 : (type === 'Agency') ? theme.palette.secondary.main : theme.palette.primary.main
@@ -76,7 +76,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     priceDesc: {
         '& span': {
             fontWeight: 600,
-            color: ({type}: IStyleProps) => {
+            color: ({ type }: IStyleProps) => {
                 return (type === 'User')
                     ? theme.palette.secondary.main
                     : (type === 'Agency') ? theme.palette.primary.main : theme.palette.secondary.main
@@ -84,10 +84,10 @@ const useStyles = makeStyles((theme: Theme) => ({
         }
     },
     price: {
-        fontSize: '60px',
+        fontSize: '50px',
         fontWeight: 600,
         lineHeight: 1,
-        color: ({type}: IStyleProps) => {
+        color: ({ type }: IStyleProps) => {
             return (type === 'User')
                 ? theme.palette.primary.main
                 : (type === 'Agency') ? theme.palette.secondary.main : theme.palette.primary.main
@@ -100,17 +100,17 @@ const useStyles = makeStyles((theme: Theme) => ({
         fontSize: '60px',
         fontWeight: 600,
         lineHeight: 1,
-        color: ({type}: IStyleProps) => {
+        color: ({ type }: IStyleProps) => {
             return (type === 'User')
                 ? theme.palette.primary.main
                 : (type === 'Agency') ? theme.palette.secondary.main : theme.palette.primary.main
         },
     },
     priceUnit: {
-        display: ({lang}: IStyleProps) => lang === 'en' ? 'block' : 'inline',
+        display: ({ lang }: IStyleProps) => lang === 'en' ? 'block' : 'inline',
         fontSize: '20px',
         fontWeight: 600,
-        color: ({type}: IStyleProps) => {
+        color: ({ type }: IStyleProps) => {
             return (type === 'User')
                 ? theme.palette.primary.main
                 : (type === 'Agency') ? theme.palette.secondary.main : theme.palette.primary.main
@@ -126,7 +126,7 @@ const useStyles = makeStyles((theme: Theme) => ({
         },
         '& span': {
             fontWeight: 600,
-            color: ({type}: IStyleProps) => {
+            color: ({ type }: IStyleProps) => {
                 return (type === 'User')
                     ? theme.palette.primary.main
                     : (type === 'Agency') ? theme.palette.secondary.main : theme.palette.primary.main
@@ -137,7 +137,7 @@ const useStyles = makeStyles((theme: Theme) => ({
         }
     },
     divider: {
-        backgroundColor: ({type}: IStyleProps) => {
+        backgroundColor: ({ type }: IStyleProps) => {
             return (type === 'User')
                 ? theme.palette.primary.main
                 : (type === 'Agency') ? theme.palette.secondary.main : theme.palette.primary.main
@@ -153,7 +153,7 @@ const useStyles = makeStyles((theme: Theme) => ({
         borderRadius: '99em',
         fontSize: '20px',
         color: theme.palette.common.white,
-        backgroundImage: ({type}: IStyleProps) => {
+        backgroundImage: ({ type }: IStyleProps) => {
             return (type === 'User')
                 ? 'linear-gradient(to right, #a78ef6, #b364f4)'
                 : (type === 'Agency') ? 'linear-gradient(to right, #0289e1, #01d6b6 100%);' : 'linear-gradient(to right, #a78ef6, #b364f4)'
@@ -163,15 +163,15 @@ const useStyles = makeStyles((theme: Theme) => ({
         marginTop: 'auto'
     }
 }));
-const PriceItem = ({type = 'User', data}: Props) => {
-    const {t, lang} = useTranslation();
-    const classes = useStyles({topic: data.topic, type, lang});
+const PriceItem = ({ type = 'User', data }: Props) => {
+    const { t, lang } = useTranslation();
+    const classes = useStyles({ topic: data.topic, type, lang });
     return (
         <div className={classes.item}>
             {
                 data.topic
                     ? <Typography variant={"body1"} component={'div'} align={"center"}
-                                  className={classes.topic}>
+                        className={classes.topic}>
                         {t('adsvantage:Most popular')}
                     </Typography>
                     : null
@@ -182,10 +182,10 @@ const PriceItem = ({type = 'User', data}: Props) => {
                         {data.projectName}
                     </Typography>
                 </div>
-                <Divider classes={{root: classes.divider}}/>
+                <Divider classes={{ root: classes.divider }} />
                 <div className={classes.row}>
                     <Typography variant={"body1"} align={"center"} className={classes.priceDesc}
-                                dangerouslySetInnerHTML={{__html: data.priceDesc}}/>
+                        dangerouslySetInnerHTML={{ __html: data.priceDesc }} />
                     <Typography component={'div'} align={"center"}>
                         {
                             data.pricePrefix
@@ -196,13 +196,13 @@ const PriceItem = ({type = 'User', data}: Props) => {
                                 :
                                 null
                         }
-                        <span className={classes.price}><span>$</span>{data.price}</span>
+                        <span className={classes.price}><span>NT$</span>{data.price}</span>
                         <span className={classes.priceUnit}>
                             {t('adsvantage:Per Month Tax excluded')}
                         </span>
                     </Typography>
                 </div>
-                <Divider classes={{root: classes.divider}}/>
+                <Divider classes={{ root: classes.divider }} />
                 <div className={clsx(classes.row)}>
                     <ul className={classes.detailList}>
                         {
@@ -212,7 +212,7 @@ const PriceItem = ({type = 'User', data}: Props) => {
                                     return (
                                         <li key={uuidv4()}>
                                             <Typography variant={"body1"} align={"center"}
-                                                        dangerouslySetInnerHTML={{__html: feature}}/>
+                                                dangerouslySetInnerHTML={{ __html: feature }} />
                                         </li>
                                     )
                                 })
@@ -220,13 +220,13 @@ const PriceItem = ({type = 'User', data}: Props) => {
                         }
                     </ul>
                 </div>
-                <Divider classes={{root: classes.divider}} className={classes.autoTop}/>
+                <Divider classes={{ root: classes.divider }} className={classes.autoTop} />
                 <div className={classes.row}>
                     <Typography variant={"body1"} align={"center"}>
                         {data.type}
                     </Typography>
                 </div>
-                <Divider classes={{root: classes.divider}}/>
+                <Divider classes={{ root: classes.divider }} />
                 <div className={clsx(classes.row)}>
                     <ul className={classes.detailList}>
                         {
@@ -236,9 +236,9 @@ const PriceItem = ({type = 'User', data}: Props) => {
                                     return (
                                         <li key={uuidv4()}>
                                             <Typography variant={"body1"} align={"center"}
-                                                        dangerouslySetInnerHTML={
-                                                            {__html: feature.length ? feature : `<span>&nbsp;</span>`}
-                                                        }/>
+                                                dangerouslySetInnerHTML={
+                                                    { __html: feature.length ? feature : `<span>&nbsp;</span>` }
+                                                } />
                                         </li>
                                     )
                                 })

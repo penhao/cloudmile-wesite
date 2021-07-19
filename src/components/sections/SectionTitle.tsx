@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme: Theme) => ({
         }
     }
 }));
-const SectionTitle = ({ variant = 'h2', component, color = 'black', innerHTML = true, className = null, children }: Props) => {
+const SectionTitle = ({ variant = 'h2', component = 'h2', color = 'black', innerHTML = true, className = null, children }: Props) => {
     const classes = useStyles({ color });
     return (
         <TextClipEffect>

@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import Sticky from "react-sticky-el";
 import Grid from "@material-ui/core/Grid";
 import makeStyles from "@material-ui/core/styles/makeStyles";
-import {Theme} from "@material-ui/core";
+import { Theme } from "@material-ui/core";
 import Container from "../../containers/Container";
 import SectionContainer from "../../containers/SectionContainer";
 import SectionLabel from "../SectionLabel";
@@ -91,22 +91,22 @@ const useStyles = makeStyles((theme: Theme) => ({
 }));
 const HomeAITechnology = () => {
     const classes = useStyles();
-    const {t,lang} = useTranslation();
+    const { t, lang } = useTranslation();
     const mdUp = useMediaQuery(useTheme().breakpoints.up('md'));
 
     const [list, setList] = useState<IListItem[] | null>(null);
     useEffect(() => {
         setList([
             {
-                value: '10+',
+                value: '10&nbsp;+',
                 desc: t('home:Served customers across over__')
             },
             {
-                value: '1',
+                value: '1&nbsp;',
                 desc: t('home:Established MarTech company, Ainotam, that__')
             },
             {
-                value: '45+',
+                value: '45&nbsp;+',
                 desc: t('home:Over 45 CloudMile’s Cloud and Machine Learning__')
             }
         ]);
@@ -115,13 +115,13 @@ const HomeAITechnology = () => {
     const getTitle = () => {
         return (
             <div className={classes.wrapper}>
-                <span className={classes.bgColor}/>
+                <span className={classes.bgColor} />
                 <Box width="100%" className={classes.titleWrapper}>
                     <Box width="100%" display={'flex'}
-                         justifyContent={(mdUp) ? 'flex-end' : 'flex-start'}>
-                        <Container maxWidth={{xs: 'none', sm: 600, md: 600}} paddingX={false}
-                                   centerX={false}>
-                            <SectionTitleLabel color={'warning'}/>
+                        justifyContent={(mdUp) ? 'flex-end' : 'flex-start'}>
+                        <Container maxWidth={{ xs: 'none', sm: 600, md: 600 }} paddingX={false}
+                            centerX={false}>
+                            <SectionTitleLabel color={'warning'} />
                             <SectionTitle>
                                 {t('home:Proven AI technology powered by experts')}
                             </SectionTitle>
@@ -148,10 +148,10 @@ const HomeAITechnology = () => {
                         }
                     </Grid>
                     <Grid item xs={12} md={6}>
-                        <Container maxWidth={{xs: 'none', sm: 'none', md: 600}} paddingX={false} centerX={false}>
+                        <Container maxWidth={{ xs: 'none', sm: 'none', md: 600 }} paddingX={false} centerX={false}>
                             <SectionDescWrapper>
                                 <Hidden smDown>
-                                    <span className={classes.scrollArea}/>
+                                    <span className={classes.scrollArea} />
                                 </Hidden>
                                 {
                                     (list && list.length)
@@ -161,9 +161,7 @@ const HomeAITechnology = () => {
                                                 list.map((item: IListItem, index: number) => {
                                                     return (
                                                         <li key={index}>
-                                                            <Typography variant={'h3'} className={classes.value}>
-                                                                {item.value}
-                                                            </Typography>
+                                                            <Typography variant={'h3'} className={classes.value} dangerouslySetInnerHTML={{ __html: item.value }} />
                                                             <Typography variant={"body1"}>
                                                                 {item.desc}
                                                             </Typography>

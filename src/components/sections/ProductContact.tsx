@@ -22,7 +22,7 @@ const ProductContact = ({ title, caption, currentPage }: Props) => {
                             <SectionTitleLabel color={'warning'}>
                                 {caption}
                             </SectionTitleLabel>
-                            <SectionTitle>
+                            <SectionTitle component={'h4'}>
                                 {title}
                             </SectionTitle>
                         </Container>

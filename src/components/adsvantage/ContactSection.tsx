@@ -30,7 +30,7 @@ function ContactSection({ scrollChangeHadler }: Props) {
                                 <SectionTitleLabel color={'secondary'}>
                                     {t('adsvantage:Please contact us')}
                                 </SectionTitleLabel>
-                                <SectionTitle>
+                                <SectionTitle component={'h4'}>
                                     {t('adsvantage:Let us help you grow the business')}
                                 </SectionTitle>
                             </Container>

@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import Sticky from "react-sticky-el";
 import Grid from "@material-ui/core/Grid";
 import makeStyles from "@material-ui/core/styles/makeStyles";
-import {Theme} from "@material-ui/core";
+import { Theme } from "@material-ui/core";
 import Container from "../../containers/Container";
 import Box from "@material-ui/core/Box";
 import SectionContainer from "../../containers/SectionContainer";
@@ -85,22 +85,22 @@ const useStyles = makeStyles((theme: Theme) => ({
 }));
 const HomeFoundation = () => {
     const classes = useStyles();
-    const {t, lang} = useTranslation();
+    const { t, lang } = useTranslation();
     const mdUp = useMediaQuery(useTheme().breakpoints.up('md'));
 
     const [list, setList] = useState<IListItem[] | null>(null);
     useEffect(() => {
         setList([
             {
-                value: '400+',
+                value: '400&nbsp;+',
                 desc: t('home:Trusted by over 400 clients__')
             },
             {
-                value: '120+',
+                value: '120&nbsp;+',
                 desc: t('home:Earned 120+ accreditations__')
             },
             {
-                value: '23,000+',
+                value: '23,000&nbsp;+',
                 desc: t('home:Managed 23,000 terabytes network__')
             }
         ]);
@@ -109,11 +109,11 @@ const HomeFoundation = () => {
     const getTitle = () => {
         return (
             <div className={classes.wrapper}>
-                <span className={classes.bgColor}/>
+                <span className={classes.bgColor} />
                 <Box width="100%" className={classes.titleWrapper}>
                     <Box width="100%" display={'flex'} justifyContent={(mdUp) ? 'flex-end' : 'flex-start'}>
-                        <Container maxWidth={{xs: 'none', sm: 600, md: 600}} paddingX={false} centerX={false}>
-                            <SectionTitleLabel color={'primary'}/>
+                        <Container maxWidth={{ xs: 'none', sm: 600, md: 600 }} paddingX={false} centerX={false}>
+                            <SectionTitleLabel color={'primary'} />
                             <SectionTitle>
                                 {t('home:Laying the foundation from Cloud')}
                             </SectionTitle>
@@ -140,10 +140,10 @@ const HomeFoundation = () => {
                         }
                     </Grid>
                     <Grid item xs={12} md={6}>
-                        <Container maxWidth={{md: 600}} paddingX={false} centerX={false}>
+                        <Container maxWidth={{ md: 600 }} paddingX={false} centerX={false}>
                             <SectionDescWrapper>
                                 <Hidden smDown>
-                                    <span className={classes.scrollArea}/>
+                                    <span className={classes.scrollArea} />
                                 </Hidden>
                                 {
                                     (list && list.length)
@@ -153,9 +153,7 @@ const HomeFoundation = () => {
                                                 list.map((item: IListItem, index: number) => {
                                                     return (
                                                         <li key={index}>
-                                                            <Typography variant={'h3'} className={classes.value}>
-                                                                {item.value}
-                                                            </Typography>
+                                                            <Typography variant={'h3'} className={classes.value} dangerouslySetInnerHTML={{ __html: item.value }} />
                                                             <Typography variant={"body1"} component={'div'}>
                                                                 {item.desc}
                                                             </Typography>

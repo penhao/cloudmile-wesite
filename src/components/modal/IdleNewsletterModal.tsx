@@ -110,7 +110,7 @@ const IdleNewsletterModal = ({ title, caption, salesforceData }: Props) => {
                                     <SectionTitleLabel color={"warning"}>
                                         {caption}
                                     </SectionTitleLabel>
-                                    <SectionTitle>
+                                    <SectionTitle component={'h4'}>
                                         {title}
                                     </SectionTitle>
                                 </Grid>
