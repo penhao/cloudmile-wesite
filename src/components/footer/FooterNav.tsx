@@ -149,7 +149,7 @@ const FooterNav = ({ statusData }: Props) => {
             const subRoutes = route.routes;
             return (
                 <Grid item xs={12} sm key={uuidv4()} className={classes.group}>
-                    <Typography component={'h3'} className={classes.title}>
+                    <Typography component={'h4'} className={classes.title}>
                         {t(`common:${route.breadcrumbName}`)}
                     </Typography>
                     <Divider classes={{ root: classes.divider }} />
@@ -179,7 +179,7 @@ const FooterNav = ({ statusData }: Props) => {
         const contactRoute: IRoute = getRoute("/contact");
         return (
             <Grid item xs={12} sm className={clsx(classes.group, classes.contactGroup)}>
-                <Typography component={'h3'} className={classes.title}>
+                <Typography component={'h4'} className={classes.title}>
                     {t(`common:${contactRoute.breadcrumbName}`)}
                 </Typography>
                 <Divider classes={{ root: classes.divider }} />
