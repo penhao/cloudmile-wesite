@@ -1,52 +1,52 @@
 {
-    "Terms": "資訊安全政策",
-    "version": "版號資訊：v1.0  發佈日期：2021/05/31",
+    "Terms": "Information Security Policy",
+    "version": "Version Number：v1.0, Date of update: 31 May, 2021",
     "list1": {
-        "title": "目的",
-        "desc": "鑑於資訊安全乃維繫各項服務安全運作之基礎,為確保英屬開曼群島商萬里雲互聯股份有限公司(CLOUD MILE INC.)(以下簡稱本公司)人員、資料、資訊系統、設備及網路之安全,特訂定資訊安全政策(以下簡稱本文件),作為本公司資訊安全管理系統(以下簡稱 ISMS)的最高指導原則。本政策適用之範圍為:本公司之分公司及持有之子公司,包括但不限於:英屬開曼群島商萬里雲互聯股份有限公司台灣分公司(Cloud Mile Inc.,TaiwanBranch)及萬里雲互聯網路有限公司(Cloud Mile Ltd)。"
+        "title": "Purpose",
+        "desc": "Considering information security served as the basis for maintaining the secure operation of services, to ensure security of the employees, information, information systems, equipment and network of CLOUD MILE INC. (the “Company”), this Information Security Policy (the “Policy”) is set forth to govern the Information Security Management System (the “ISMS”) of the Company. This Policy shall apply to the Company’s branch company, subsidiary, including but not limited to Cloud Mile Inc., Taiwan Branch and Cloud Mile Ltd. "
     },
     "list2": {
-        "title": "目標",
-        "desc": "本公司資訊安全目標為:確保重要資訊及服務之機密性(Confidentiality)、完整性(Integrity)、可用性(Availability)與遵循性(Compliance)。並依各階層與職能定義及量測資訊安全績效之量化指標,以確認 ISMS 實施狀況及是否達成資訊安全目標。"
+        "title": "Objectives",
+        "desc": "The information security objectives of the Company will be ensuring important information and services as to Confidentiality, Integrity, Availability and Compliance. The Company will define and measure the information security key performance indicators in accordance with the levels and functions for confirmation of the implementation of ISMS and the accomplishment of the information security objectives. "
     },
     "list3": {
-        "title": "適用範圍",
-        "desc": "本 ISMS 考量本公司內部及外部議題、關注方之需要及期望,以及本公司活動與其他組織活動間之介面及相依性,適用範圍為:MSP(Managed Service Provider)服務之規劃、建置、營運、託管、MileLync 軟體開發及作業環境。"
+        "title": "Applicable Scope of this Information Security Policy",
+        "desc": "Considering the internal and external issues of the Company, needs and expectations of interested parties and the interfaces and dependencies regarding the Company’s and other organizations’ activities, this Policy shall apply to plan, establishment, operation, managed service of MSP(Managed Service Provider) Service, and development of MileLync and its operating environment."
     },
     "list4": {
-        "title": "涵蓋內容",
+        "title": "Coverage",
         "desc": " ISMS 包括內容如下,有關單位及人員就下列事項,應訂定對應之管理規範或實施計畫,並據以實施及定期評估實施成效:",
-        "sublist1": "資安組織及管理審查程序",
-        "sublist2": "文件與記錄管理",
-        "sublist3": "資安目標與績效評量",
-        "sublist4": "風險管理",
-        "sublist5": "資訊安全內部稽核",
-        "sublist6": "持續改善",
-        "sublist7": "人力資源安全管理",
-        "sublist8": "資產管理",
-        "sublist9": "存取控制管理",
-        "sublist10": "實體與環境安全管理",
-        "sublist11": "運作安全與密碼學",
-        "sublist12": "通訊安全管理",
-        "sublist13": "系統獲取、發展與維護管理",
-        "sublist14": "供應商關係管理",
-        "sublist15": "資訊安全事故管理",
-        "sublist16": "營運持續管理",
-        "sublist17": "遵循性管理"
+        "sublist1": "Information security roles and responsibilities and management review procedure.",
+        "sublist2": "Management of documents and records. ",
+        "sublist3": "The information security objectives and performance evaluation. ",
+        "sublist4": "Risk management.",
+        "sublist5": "Internal audit of information security.",
+        "sublist6": "Continuous improvement. ",
+        "sublist7": "Human resources security management.",
+        "sublist8": "Asset management. ",
+        "sublist9": "Access control management. ",
+        "sublist10": "Physical and environmental security. ",
+        "sublist11": "Operations security and cryptography.",
+        "sublist12": "Communication security management",
+        "sublist13": "Management of system acquisition, development and maintenance. ",
+        "sublist14": "Supplier relationships management. ",
+        "sublist15": "Information security incident management. ",
+        "sublist16": "Business continuity management",
+        "sublist17": "Compliance management"
     },
     "list5": {
-        "title": "組織與權責",
-        "desc": "為確保 ISMS 能有效運作,應明定資訊安全組織及權責,以推動及維持各類管理、執行與查核等工作之進行。"
+        "title": "Organization and Responsibilities",
+        "desc": "To ensure the effective operation of ISMS, the Company shall establish the organization and responsibilities of information security for promoting and maintaining the progress of management, implementation and check. "
     },
     "list6": {
-        "title": "實施原則",
-        "desc": "ISMS 之實施應依據規劃(Plan)、執行(Do)、查核(Check)及改善(Act)流程模式,以週而復始、循序漸進的精神,確保 ISMS 運作之有效性及持續改善。"
+        "title": "Enforcement Principles",
+        "desc": "The ISMS shall be implemented in the Plan, Do, Check and Act processing model, and in a repeated and iterative approach, to ensure the effectiveness of operation and continuous improvement of ISMS."
     },
     "list7": {
-        "title": "審查與評估",
+        "title": "Review and Evaluation",
         "desc": "ISMS 之實施應依據規劃(Plan)、執行(Do)、查核(Check)及改善(Act)流程模式,以週而復始、循序漸進的精神,確保 ISMS 運作之有效性及持續改善。",
-        "sublist1": "本文件應於重大變更或至少每年評估審查一次,以反映相關法令法規、技術、業務及相關部門等最新發展現況,確保資訊安全實務作業之有效性。",
-        "sublist2": "本文件應依據審查結果進行修訂,並經本公司負責人簽核發佈後始生效。",
-        "sublist3": "本文件訂定或修訂後應以書面、電子郵件、文件管理系統或其他方式告知關注方,如:客戶、合作夥伴、所屬員工、供應商等。"
+        "sublist1": "This Policy shall be under review and evaluation upon major changes or at least once a year in order to reflect the latest development of related regulations and laws, technologies, business and relevant department in order to ensure the effectiveness of information security practices.",
+        "sublist2": "This Policy will be modified in accordance with the evaluation results and shall be effective upon signed and posted by the representative of the Company.",
+        "sublist3": "The Company will make the notice to the interested parties, such as clients, business partners, employees and suppliers, in writing, email, document management system or other ways upon establishment or modification of this Policy. "
     }
 }

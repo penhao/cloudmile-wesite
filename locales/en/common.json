@@ -26,11 +26,11 @@
     "Career": "Career",
     "Contact Us": "Contact Us",
     "Privacy": "Privacy",
-    "Policy Terms": "資訊安全政策",
+    "Policy Terms": "Information Security Policy",
     "Managed Service": "Managed Service",
     "Cloud Management Platform": "Cloud Management Platform",
     "Questions？": "Contact Us",
-    "No problem We can help you__": "No problem. We can help you!<br/>Just call one of our sales agents with the phone number below.<br/><br/>Singapore Office：+65-6932-2820<br/>Hong Kong Office：+852-3481-0068<br/>Taiwan Office：+886-2-2757-6077",
+    "No problem We can help you__": "No problem. We can help you!<br/>Just call one of our sales agents with the phone number below.<br/><br/>Singapore Office：+65-6993-2383<br/>Hong Kong Office：+852-3481-0068<br/>Taiwan Office：+886-2-2757-6077",
     "Page not found": "Page not found",
     "Back to home": "Back to home",
     "THANK YOU FOR YOUR INQUIRY": "THANK YOU FOR YOUR INQUIRY",
@@ -42,5 +42,6 @@
     "Register": "Register",
     "More": "More",
     "Widget Let's Chat": "Let's Chat",
-    "Widget Contact Us": "Contact Us"
+    "Widget Contact Us": "Contact Us",
+    "Information Security Policy": "Information Security Policy"
 }

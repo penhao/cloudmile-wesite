@@ -11,4 +11,3 @@ module.exports = {
         RECAPTCHAKEY: "6LdLAv8ZAAAAAOna-skW7yAI9CRfGgKwpWEUUWyC",
     },
 };
-å;

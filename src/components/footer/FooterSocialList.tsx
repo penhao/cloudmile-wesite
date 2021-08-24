@@ -1,4 +1,4 @@
-import React, {Fragment, ReactNode, useEffect, useState} from 'react';
+import React, { Fragment, ReactNode, useEffect, useState } from "react";
 import IconFacebook from "../icons/IconFacebook";
 import IconLinkedin from "../icons/IconLinkedin";
 import IconYoutube from "../icons/IconYoutube";
@@ -6,11 +6,11 @@ import IconLine from "../icons/IconLine";
 import Grid from "@material-ui/core/Grid";
 import NavLink from "../links/NavLink";
 import clsx from "clsx";
-import {useLinkStyles} from "../links/LinkStyles";
+import { useLinkStyles } from "../links/LinkStyles";
 
 interface ISocial {
-    link: string,
-    icon: ReactNode
+    link: string;
+    icon: ReactNode;
 }
 
 const FooterSocialList = () => {
@@ -19,40 +19,32 @@ const FooterSocialList = () => {
     useEffect(() => {
         setList([
             {
-                link: 'https://www.facebook.com/CloudMileFans/',
-                icon: <IconFacebook/>
+                link: "https://www.facebook.com/CloudMileFans/",
+                icon: <IconFacebook />,
             },
             {
-                link: 'https://www.linkedin.com/company/cloudmile/',
-                icon: <IconLinkedin/>
+                link: "https://www.linkedin.com/company/cloudmile/",
+                icon: <IconLinkedin />,
             },
             {
-                link: 'https://www.youtube.com/channel/UC_FaTcAjgGsTOWHk6GcLUzw',
-                icon: <IconYoutube/>
+                link: "https://www.youtube.com/channel/UC_FaTcAjgGsTOWHk6GcLUzw",
+                icon: <IconYoutube />,
             },
-            {
-                link: 'https://lin.ee/4kg4pcy',
-                icon: <IconLine/>
-            }
         ]);
     }, []);
     return (
         <Fragment>
-            {
-                (list && list.length)
-                    ?
-                    list.map((item: ISocial, index: number) => {
-                        return (
-                            <Grid item key={index}>
-                                <NavLink hrefPath={item.link}
-                                         classNames={clsx(linkClasses.textLink)}>
-                                    {item.icon}
-                                </NavLink>
-                            </Grid>
-                        )
-                    })
-                    : null
-            }
+            {list && list.length
+                ? list.map((item: ISocial, index: number) => {
+                      return (
+                          <Grid item key={index}>
+                              <NavLink hrefPath={item.link} isLaunch={true} classNames={clsx(linkClasses.textLink)}>
+                                  {item.icon}
+                              </NavLink>
+                          </Grid>
+                      );
+                  })
+                : null}
         </Fragment>
     );
 };

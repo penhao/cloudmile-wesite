@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import clsx from "clsx";
 import Grid from "@material-ui/core/Grid";
 import useTranslation from "next-translate/useTranslation";
@@ -13,36 +13,35 @@ import { fetchNavStatus } from "../../services/ApiServices";
 import { useRouter } from "next/router";
 import { getRoute } from "../../@share/routes/Routes";
 
-
 export const useStyles = makeStyles((theme: Theme) => ({
     footer: {
-        position: 'relative',
-        width: '100%',
-        padding: '40px 0 100px 0',
+        position: "relative",
+        width: "100%",
+        padding: "40px 0 100px 0",
         backgroundColor: theme.palette.grey["200"],
         zIndex: 2,
         [theme.breakpoints.up("sm")]: {
-            padding: '40px 0 25px 0',
-        }
+            padding: "40px 0 25px 0",
+        },
     },
     legal: {
-        marginTop: '20px',
+        marginTop: "20px",
         [theme.breakpoints.up("sm")]: {
-            marginTop: '50px',
+            marginTop: "50px",
         },
-        '& .MuiGrid-item': {
-            [theme.breakpoints.up('sm')]: {
-                flex: '0 1 auto'
-            }
-        }
+        "& .MuiGrid-item": {
+            [theme.breakpoints.up("sm")]: {
+                flex: "0 1 auto",
+            },
+        },
     },
     privacyLinks: {
         display: "flex",
-        '& li': {
+        "& li": {
             padding: "0 20px",
-            borderLeft: `1px solid ${theme.palette.common.black}`
-        }
-    }
+            borderLeft: `1px solid ${theme.palette.common.black}`,
+        },
+    },
 }));
 
 const Footer = () => {
@@ -74,25 +73,19 @@ const Footer = () => {
                     <Grid item xs={12} sm>
                         <ul className={classes.privacyLinks}>
                             <li>
-                                <NavLink hrefPath={privacyRoute.path}
+                                <NavLink
+                                    hrefPath={privacyRoute.path}
                                     underline={true}
-                                    classNames={clsx(linkClasses.textLink)}>
+                                    classNames={clsx(linkClasses.textLink)}
+                                >
                                     {t(`common:${privacyRoute.breadcrumbName}`)}
                                 </NavLink>
                             </li>
-                            {
-                                lang === "zh" ?
-                                    <li>
-                                        <NavLink hrefPath={"/terms"}
-                                            underline={true}
-                                            classNames={clsx(linkClasses.textLink)}>
-                                            資訊安全政策
-                                        </NavLink>
-                                    </li>
-                                    :
-                                    null
-                            }
-
+                            <li>
+                                <NavLink hrefPath={"/terms"} underline={true} classNames={clsx(linkClasses.textLink)}>
+                                    {t("common:Information Security Policy")}
+                                </NavLink>
+                            </li>
                         </ul>
                     </Grid>
                 </Grid>

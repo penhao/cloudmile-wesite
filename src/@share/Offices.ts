@@ -9,16 +9,15 @@ export interface IOffice {
 const Offices = <IOffice[]>[
     {
         office: "Singapore Office",
-        address: "Suite 1167, 5 Shenton Way, UIC Building, #10-01, Singapore",
-        addressLink: "https://goo.gl/maps/oHsfXkr99wweYJzZA",
-        tel: "+65-6932-2820",
+        address: "Singapore Address",
+        addressLink: "https://goo.gl/maps/cVtUySaEkhhhSrxa6",
+        tel: "+65-6993-2383",
         serviceEmail: "service@mile.cloud",
         hrEmail: "hr@mile.cloud",
     },
     {
         office: "Hong Kong Office",
-        address:
-            "Suite 402, Level 4, Lee Garden Three,1 Sunning Road, Causeway Bay, Hong Kong",
+        address: "Hong Kong Address",
         addressLink: "https://goo.gl/maps/PeJau98wYihdbpx6A",
         tel: "+852-3481-0068",
         serviceEmail: "service@mile.cloud",
