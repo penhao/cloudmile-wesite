@@ -91,7 +91,7 @@ const useStyles = makeStyles((theme: Theme) => ({
         "& .item-2018-June": {
             "& .historyCover": {
                 width: "440px",
-                bottom: "10px",
+                bottom: "-20px",
                 left: "-460px",
             },
             "& .historyDot": {
@@ -161,6 +161,9 @@ const useStyles = makeStyles((theme: Theme) => ({
             },
             [theme.breakpoints.up("md")]: {
                 marginLeft: 0,
+                marginTop: ({ lang }: { lang: string }) => {
+                    return lang === "zh" ? "10px" : 0;
+                },
             },
             "& svg": {
                 position: "absolute",
@@ -325,11 +328,11 @@ interface IProps {
     lastHistory: boolean;
 }
 const HistoryAccordion = ({ data, lastHistory = false }: IProps) => {
-    const { t } = useTranslation();
+    const { t, lang } = useTranslation();
     const [open, setOpen] = useState(false);
     const detailRef = useRef(null);
     const [detailHeight, setDetailHeight] = useState(0);
-    const classes = useStyles({ detailHeight });
+    const classes = useStyles({ detailHeight, lang });
     const handleClick = () => setOpen((open) => !open);
 
     useEffect(() => {
