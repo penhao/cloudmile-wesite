@@ -75,7 +75,7 @@ const useStyles = makeStyles((theme: Theme) => ({
         position: "relative",
         fontSize: "2.75rem",
         fontWeight: 700,
-        lineHeight: 0.8,
+        lineHeight: 1,
         margin: "20px 0 40px 0",
         left: "50%",
         transform: "translateX(-50%)",
@@ -93,9 +93,7 @@ const useStyles = makeStyles((theme: Theme) => ({
             fontWeight: "normal",
             textAlign: "left",
             textIndent: "5px",
-            [theme.breakpoints.up("sm")]: {
-                marginTop: "20px",
-            },
+            [theme.breakpoints.up("sm")]: {},
         },
     },
 }));

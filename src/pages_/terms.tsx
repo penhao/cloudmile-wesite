@@ -83,10 +83,11 @@ const useStyles = makeStyles((theme: Theme) => ({
         position: "relative",
         fontSize: "2.75rem",
         fontWeight: 700,
-        lineHeight: 0.8,
+        lineHeight: 1,
         margin: "20px 0 40px 0",
         left: "50%",
         transform: "translateX(-50%)",
+        textAlign: "center",
         [theme.breakpoints.up("sm")]: {
             margin: "20px 0 60px 0",
         },
@@ -99,15 +100,17 @@ const useStyles = makeStyles((theme: Theme) => ({
             position: "relative",
             marginTop: "10px",
             fontWeight: "normal",
-            [theme.breakpoints.up("sm")]: {
-                marginTop: "20px",
+            [theme.breakpoints.up("sm")]: {},
+            [theme.breakpoints.up("md")]: {
+                textAlign: "left",
+                textIndent: ({ lang }: { lang: string }) => (lang === "en" ? "60px" : 0),
             },
         },
     },
 }));
 const PolicyTerms = () => {
-    const classes = useStyles();
     const { t, lang } = useTranslation();
+    const classes = useStyles({ lang });
     const metadata = getMetadada("/terms");
     const [breadcrumbData, setBreadcrumbData] = useState([]);
     useEffect(() => {
